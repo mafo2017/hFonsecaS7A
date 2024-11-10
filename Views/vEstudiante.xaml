@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hFonsecaS7A.Views.vEstudiante"
+             Title="vEstudiante">
+    <VerticalStackLayout>
+        <Label 
+            Text="Semana 7: Servicios WEB"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <!-- CABECERA DE TABLA -->
+        <Label Text="Lista de Estudiantes"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="10">
+        </Label>
+
+        <ListView x:Name="lvEstudiantes"
+                  ItemSelected="lvEstudiantes_ItemSelected"
+                  Margin="10">
+            
+            <!-- CABECERA DEL LISTVIEW-->
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal"
+                             Padding="10"
+                             Background="LightBlue">
+                    <Label Text="CODIGO"
+                           HorizontalOptions="StartAndExpand"
+                           FontAttributes="Bold"
+                    />
+                    <Label Text="NOMBRE"
+                           HorizontalOptions="StartAndExpand"
+                           FontAttributes="Bold"
+                    />
+                    <Label Text="APELLIDO"
+                           HorizontalOptions="StartAndExpand"
+                           FontAttributes="Bold"
+                    />
+                    <Label Text="EDAD"
+                           HorizontalOptions="StartAndExpand"
+                           FontAttributes="Bold"
+                    />
+                </StackLayout>
+            </ListView.Header>
+            
+            <!--DETALLE DEL LISTVIEW-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal"
+                                     Padding="10"
+                                     Spacing="10">
+                            <Label Text="{Binding codigo}"
+                                   HorizontalOptions="StartAndExpand"
+                            />
+                            <Label Text="{Binding nombre}"
+                                  HorizontalOptions="StartAndExpand"
+                           />
+                            <Label Text="{Binding apellido}"
+                                  HorizontalOptions="StartAndExpand"
+                           />
+                            <Label Text="{Binding edad}"
+                                  HorizontalOptions="StartAndExpand"
+                           />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- CREAMOS UN BOTON-->
+        <Button x:Name="btnInsertar"
+            Text="Insertar"
+            Clicked="btnInsertar_Clicked"
+            BackgroundColor="LightGreen"
+            Margin="20"
+            WidthRequest="300">
+        </Button>
+    </VerticalStackLayout>
+
+</ContentPage>
