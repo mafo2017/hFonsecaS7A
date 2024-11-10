@@ -7,7 +7,7 @@ namespace hFonsecaS7A.Views;
 
 public partial class vEstudiante : ContentPage
 {
-	private const string Url = "http://192.168.8.200/uisraelws/estudiante.php";
+	public const string Url = "http://192.168.2.109/uisraelws/estudiante.php";
 	private readonly HttpClient cliente = new HttpClient();
 	private ObservableCollection<Estudiante> estud;
 

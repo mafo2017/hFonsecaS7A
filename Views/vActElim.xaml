@@ -23,10 +23,16 @@
 
         <Button x:Name="btnActualizar"
                 Text="Actualizar"
-                Clicked="btnActualizar_Clicked"/>
+                Clicked="btnActualizar_Clicked"
+                WidthRequest="300"
+                Padding="10"
+                Margin="20"/>
         <Button x:Name="btnEliminar"
                 Text="Eliminar"
-                Clicked="btnEliminar_Clicked"/>
+                Clicked="btnEliminar_Clicked"
+                WidthRequest="300"
+                Padding="10"
+                Margin="20"/>
         
     </VerticalStackLayout>
 </ContentPage>
